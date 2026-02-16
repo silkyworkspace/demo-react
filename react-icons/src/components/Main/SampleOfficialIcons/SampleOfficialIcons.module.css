@@ -1,0 +1,10 @@
+.iconsItems {
+    display: grid;
+    grid-template-columns: 140px 40px;
+    padding-inline: 0;
+}
+
+.item {
+    display: grid;
+    place-items: center;
+}
