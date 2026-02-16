@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# Icons
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## React Icons
+- 人気のアイコンライブラリで、技術系ロゴが豊富
+- npm/yarnでインストールして使用
+- TypeScript対応
+- サイズやカラーの調整が容易
+```bash
+npm install react-icons
+```
+```tsx
+import { SiTypescript, SiReact } from 'react-icons/si';
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+<SiTypescript size={40} color="#3178C6" />
+<SiReact size={40} color="#61DAFB" />
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+https://react-icons.github.io/react-icons/search/
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Simple Icons
+- CDNから直接SVGを取得できる
+- ダウンロード可能
+- imgタグで簡単に使用可能
+- URLで色のカスタマイズも可能
+```tsx
+<img src="https://cdn.simpleicons.org/typescript" alt="TypeScript" />
+<img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" />
 ```
+
+https://simpleicons.org/
+
+
+## Iconify
+- 200,000以上のアイコンを統一されたAPIで使用可能
+- 150以上のアイコンセットを統合（Material Design, Font Awesome, Simple Icons等）
+- オンデマンド読み込みでバンドルサイズが小さい
+- 柔軟なカスタマイズ（サイズ、色、回転、反転等）
+```bash
+npm install @iconify/react
+```
+```tsx
+import { Icon } from '@iconify/react';
+
+<Icon icon="simple-icons:typescript" width="40" color="#3178C6" />
+<Icon icon="mdi:home" width="40" />
+```
+
+- Iconify for React  
+https://iconify.design/docs/icon-components/react/
+
+- アイコン検索（Simple Icons）  
+https://icon-sets.iconify.design/simple-icons/
+
+
+## 公式サイトからダウンロード
+- 各技術の公式サイトからSVGファイルをダウンロードして使用
+- 最も公式で正確なロゴが入手可能
+- ブランドガイドラインに準拠
+
+例：TypeScript  
+https://www.typescriptlang.org/branding/

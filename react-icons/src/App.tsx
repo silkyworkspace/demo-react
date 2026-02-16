@@ -1,11 +1,17 @@
 import './App.css'
+import Header from './components/Header/Header'
+import Main from './components/Main/Main'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
   return (
     <>
-    <h1>Icons</h1>
-    <h2>React Icons</h2>
+      <div className="wrapper">
+        <Header text='Icons' />
+        <Main />
+        <Footer />
+      </div>
     </>
   )
 }
